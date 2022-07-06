@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sakura_World->注册</title>
+<link rel="stylesheet" type="text/css" href="https://api.wdsj.games/css/2/css.css"/>
+<link rel="shortcut icon" href="/img/favicon.ico">
+</head>
+
+<body>
+	<div id="background">
+		<div id="main-body">
+			<div id="left-main-body">
+				<h1 id="left-main-body-font-1">Sakura_World</h1> 
+				<p id="left-main-body-font-2">已有帐号点击登录</p>
+				<button id="left-main-body-button" onclick="window.location.href = 'login.php'"><p>登录</p></button>
+			</div>
+			
+			<div id="right-main-body">
+				<h1 id="right-main-body-font-1">注册 Register</h1>
+				<form id="right-main-body-form" action="register.php" method="POST">
+				    <input type="email" placeholder="邮箱" id="email" name="email">
+					<input type="text" placeholder="用户名" id="username" name="username">
+					<input type="password" placeholder="密码" id="password" name="password">
+					<input type="text" placeholder="验证码" id="vaptcha" name="vaptcha">
+				
+					 <input type="submit" value="提交" id="submit">
+				</form>
+				<img src="./captcha.php" id="vaptcha-img" onclick="document.getElementById('vaptcha-img').src='./captcha.php?r=' + Math.random()">
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
